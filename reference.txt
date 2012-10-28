@@ -1,3 +1,7 @@
+#######################################
+#Pins as they appear on the test board#
+#######################################
+
 Black		Ground
 Red			Power
 White		Contrast(5V min, 0V max)
@@ -14,3 +18,14 @@ Orange		DB6
 Yellow		DB7
 Red			Backlight Anode
 Black		Backlight Cathode
+
+##############
+#Pin function#
+##############
+
+RS			Register select. 0 = instruction register, 1 = data register.
+R/W			Read or write mode. Many applications can simply tie this pin to ground.
+E			Clock pin.
+
+DB4-DB7		Data pins. Send four bits at a time. We are only going to support 4-bit mode because 8-bit mode is stupid.
+DB7			Busy Flag. When RS is 0 and R/W is 1, if DB7 is high the driver's CPU is busy.
