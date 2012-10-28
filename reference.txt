@@ -1,0 +1,16 @@
+Black		Ground
+Red			Power
+White		Contrast(5V min, 0V max)
+Orange		RS Register Select
+Yellow		RW Read/Write
+Blue		E Clock
+
+
+
+
+Blue		DB4
+Green		DB5
+Orange		DB6
+Yellow		DB7
+Red			Backlight Anode
+Black		Backlight Cathode
