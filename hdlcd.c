@@ -15,17 +15,61 @@
 void HTC()
 {
 	ClockUp;
-	_delay_us(500);
+	_delay_us(300);
 	ClockDown;
-	_delay_us(500);
+	_delay_us(300);
 }
 
 void lcdinit()
 {
+	_delay_ms(50);
 	Ireg;
 	WriteMode;
+	PORTB = 0x03;
+	HTC();
+	_delay_ms(50);
+	HTC();
+	_delay_ms(50);
+	HTC();
 	PORTB = 0x02;
 	HTC();
+	HTC();
 	PORTB = 0x00;
+	HTC();
+	HTC();
+	PORTB = 0x08;
+	HTC();
+	PORTB = 0x00;
+	HTC();
+	PORTB = 0x01;
+	HTC();
+	PORTB = 0x00;
+	HTC();
+	PORTB = 0x04;
+	HTC();
+	_delay_ms(5);
+	PORTB = 0x02;
+	HTC();
+	PORTB = 0x08;
+	HTC();
+}
+
+void lcdclear()
+{
+	Ireg;
+	WriteMode;
+	PORTB = 0x00;
+	HTC();
+	PORTB = 0x01;
+	HTC();
+}
+
+void lcdon()
+{
+	Ireg;
+	WriteMode;
+	PORTB = 0x00;
+	HTC();
+	PORTB =0x0C;
 	HTC();
 }

@@ -8,5 +8,6 @@
 #define ClockDown PORTD &= ~(1<<3) //E(clock) - D3
 
 void HTC();
-
 void lcdinit();
+void lcdclear();
+void lcdon();
