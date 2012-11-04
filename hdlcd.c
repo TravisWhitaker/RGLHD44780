@@ -73,3 +73,13 @@ void lcdon()
 	PORTB =0x0C;
 	HTC();
 }
+
+void lcdoff()
+{
+	Ireg;
+	WriteMode;
+	PORTB = 0x00;
+	HTC();
+	PORTB = 0x08;
+	HTC();
+}

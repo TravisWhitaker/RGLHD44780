@@ -11,3 +11,4 @@ void HTC();
 void lcdinit();
 void lcdclear();
 void lcdon();
+void lcdoff();
